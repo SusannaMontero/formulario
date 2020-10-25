@@ -16,7 +16,6 @@ input, textarea {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-  
 }
 
 /* modificamos el boton, todos los input que sean submit se modificaran */
@@ -31,10 +30,10 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
+/*no he conseguido que el "correcto" o "incorrecto" se vea justo debajo del label*/
 #correcto, #incorrecto {
   color: red;
   font-size: small;
-  margin-bottom: 40px;
 }
 
 #mensaje {
