@@ -1,5 +1,5 @@
 <form action="">
-  <label for="Nombre">Nombre:</label>
+  <label for="nombre">Nombre:</label>
   <input type="text" #vName id="" placeholder="Escribe">
 
   <label for="dni">DNI:</label>
@@ -10,7 +10,7 @@
     <div id="incorrecto" *ngSwitchCase="'Incorrecto'"><sub>Incorrecto</sub></div>
   </div>
 
-  <label for="Mensaje">Mensaje:</label>
+  <label for="mensaje">Mensaje:</label>
   <textarea type="text" #Mensaje  placeholder="Escribe un mensaje"></textarea>
 
   <div [ngSwitch]="mostrarMensaje">
