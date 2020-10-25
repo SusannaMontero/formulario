@@ -6,7 +6,7 @@ form {
 }
 
 label {
-  font-size: 12px;
+  font-size: 20px;
   display: block;
   margin-bottom: 5px;
 }
@@ -16,6 +16,7 @@ input, textarea {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
+  
 }
 
 /* modificamos el boton, todos los input que sean submit se modificaran */
@@ -28,4 +29,15 @@ input[type="submit"]{
 input[type="submit"]:hover {
   background: red;
   cursor: pointer;
+}
+
+#correcto, #incorrecto {
+  color: red;
+  font-size: small;
+  margin-bottom: 40px;
+}
+
+#mensaje {
+  color: red;
+  text-align: right;
 }

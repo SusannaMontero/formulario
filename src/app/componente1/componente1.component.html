@@ -1,21 +1,23 @@
 <form action="">
-  <label for="Nombre">Nombre</label>
+  <label for="Nombre">Nombre:</label>
   <input type="text" #vName id="" placeholder="Escribe">
 
-  <label for="dni">DNI</label>
+  <label for="dni">DNI:</label>
   <input type="text" #vDNI id="" placeholder="Escribe tu DNI">
 
   <div [ngSwitch]="mostrarInfo">
-    <div id="correcto" *ngSwitchCase="'Correcto'">Correcto</div>
-    <div id=""></div>
+    <div id="correcto" *ngSwitchCase="'Correcto'"><sub>Correcto</sub></div>
+    <div id="incorrecto" *ngSwitchCase="'Incorrecto'"><sub>Incorrecto</sub></div>
   </div>
 
-  <label for="Mensaje">Mensaje</label>
-  <textarea name="" id="" placeholder="Escribe un mensaje"></textarea>
+  <label for="Mensaje">Mensaje:</label>
+  <textarea type="text" #Mensaje  placeholder="Escribe un mensaje"></textarea>
 
-  <input type="submit"  (click)="EnviarDatos(vName, vDNI.value)" value="Enviar">
+  <div [ngSwitch]="mostrarMensaje">
+    <div id="mensaje" *ngSwitchCase="'El texto introducido es demasiado corto'">El texto introducido es demasiado corto</div>
+  </div>
+
+  <input type="submit"  (click)="EnviarDatos(vName, vDNI.value, vMensaje)" value="Enviar">
 <!-- .value para que pille directamente el dato, se puede hacer con o sin -->
-
-
 </form>
 

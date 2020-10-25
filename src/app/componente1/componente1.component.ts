@@ -12,18 +12,23 @@ export class Componente1Component implements OnInit {
   ngOnInit(): void {
   }
   erDNI = '^[0-9]{8}[A-Za-z]$';
-  mostrarInfo = ""
+  mostrarInfo = "";
+  mostrarMensaje = "";
 
-  EnviarDatos(nombre, dni){
+  EnviarDatos(nombre, dni, mensaje){
 
     if(nombre.value =="") {
       alert("El nombre esta vacío");
     }
 
     if(dni.match(this.erDNI)) {
-      this.mostrarInfo="Correcto"
+      this.mostrarInfo="Correcto";
     }else {
-      this.mostrarInfo="Incorrecto"
+      this.mostrarInfo="Incorrecto";
+    }
+
+    if(mensaje.value.lenght <= 2) {
+      this.mostrarMensaje = "El texto introducido es demasiado corto";
     }
   }
 }
