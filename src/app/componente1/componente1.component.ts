@@ -23,11 +23,12 @@ export class Componente1Component implements OnInit {
 
     if(dni.match(this.erDNI)) {
       this.mostrarInfo="Correcto";
+
     }else {
       this.mostrarInfo="Incorrecto";
     }
 
-    if(mensaje.value.lenght <= 2) {
+    if(mensaje.value.length <= 2) {
       this.mostrarMensaje = "El texto introducido es demasiado corto";
     }
   }
